@@ -1,6 +1,5 @@
 package fetcher
 
 type Fetcher interface {
-	Fetch(url string) (body string, urls []string, err error)
-	Crawl()
+	Fetch() (title string, body string, urls []string, err error)
 }
