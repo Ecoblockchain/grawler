@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/labstack/echo"
+	fetcher "github.com/timakin/grawler/fetcher"
 	"net/http"
 )
 
@@ -13,14 +14,10 @@ func registrationHandler(c echo.Context) error {
 	return c.String(http.StatusOK, "Register!")
 }
 
-func fetchHandler(c echo.Context) error {
-	return c.String(http.StatusOK, "Fetch!")
-}
-
 func main() {
 	e := echo.New()
 	e.GET("/", rootHandler)
 	e.POST("/register", registrationHandler)
-	e.POST("/fetch/:id", fetchHandler)
+	e.POST("/fetch/:id", fetcher.FetchHandler)
 	e.Logger.Fatal(e.Start(":8080"))
 }
