@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/labstack/echo"
 	"net/http"
 )
@@ -24,8 +23,4 @@ func main() {
 	e.POST("/register", registrationHandler)
 	e.POST("/fetch/:id", fetchHandler)
 	e.Logger.Fatal(e.Start(":8080"))
-
-	http.HandleFunc("/", rootHandler)
-	http.HandleFunc("/register", registrationHandler)
-	http.HandleFunc("/fetch/{id}", fetchHandler)
 }
