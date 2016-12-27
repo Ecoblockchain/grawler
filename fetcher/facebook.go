@@ -14,7 +14,7 @@ type FacebookFetcher struct {
 func (ff *FacebookFetcher) Fetch() (title string, body string, urls []string, err error) {
 	res, _ := fb.Get("/538744468", fb.Params{
 		"fields":       "first_name",
-		"access_token": os.Getenv("GRAWLER_FACEBOOK_ACCESS_TOKEN"),
+		"access_token": os.Getenv("FACEBOOK_ACCESS_TOKEN"),
 	})
 	pp.Print(res)
 	title = ""
