@@ -5,6 +5,7 @@ type FeedItem struct {
 	Body          string
 	ThumbnailPath string
 	VideoPath     string
+	CreatedAt     string
 }
 
 type Result struct {
@@ -14,5 +15,5 @@ type Result struct {
 }
 
 type Fetcher interface {
-	Fetch() *Result
+	Fetch() Result
 }
