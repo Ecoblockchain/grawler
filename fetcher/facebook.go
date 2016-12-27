@@ -12,8 +12,8 @@ type FacebookFetcher struct {
 }
 
 func (ff *FacebookFetcher) Fetch() (title string, body string, urls []string, err error) {
-	res, _ := fb.Get("/538744468", fb.Params{
-		"fields":       "first_name",
+	res, _ := fb.Get("/"+ff.pageId+"/posts", fb.Params{
+		"fields":       "message,full_picture,created_time,permalink_url,source",
 		"access_token": os.Getenv("FACEBOOK_ACCESS_TOKEN"),
 	})
 	pp.Print(res)

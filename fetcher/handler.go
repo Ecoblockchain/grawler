@@ -8,7 +8,8 @@ import (
 )
 
 func FetchHandler(c echo.Context) error {
-	fbFetcher := &FacebookFetcher{pageId: "538744468"}
+	pp.Print(c.QueryParam("page_id"))
+	fbFetcher := &FacebookFetcher{pageId: c.QueryParam("page_id")}
 	a, b, arraa, d := fbFetcher.Fetch()
 	pp.Print(a)
 	pp.Print(b)

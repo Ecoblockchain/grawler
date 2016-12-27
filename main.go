@@ -18,6 +18,6 @@ func main() {
 	e := echo.New()
 	e.GET("/", rootHandler)
 	e.POST("/register", registrationHandler)
-	e.POST("/fetch/:id", fetcher.FetchHandler)
+	e.POST("/fetch", fetcher.FetchHandler)
 	e.Logger.Fatal(e.Start(":8080"))
 }
