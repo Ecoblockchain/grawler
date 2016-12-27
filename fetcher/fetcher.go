@@ -1,5 +1,18 @@
 package fetcher
 
+type FeedItem struct {
+	Title         string
+	Body          string
+	ThumbnailPath string
+	VideoPath     string
+}
+
+type Result struct {
+	Name  string
+	Items []FeedItem
+	Error error
+}
+
 type Fetcher interface {
-	Fetch() (title string, body string, urls []string, err error)
+	Fetch() *Result
 }
