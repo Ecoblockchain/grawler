@@ -1,6 +1,10 @@
-hash: a4a9b2046e38d29622516d24b93454c7ab98d1e12bb83951b9d40fa8ef3b47cd
-updated: 2016-12-26T23:31:17.727429231+09:00
+hash: 5ece1504bfb11bfaee8def666bc70ea09bba66dd018bec5263e1bf3b1571f9ec
+updated: 2016-12-27T19:22:00.168379241+09:00
 imports:
+- name: github.com/huandu/facebook
+  version: 24ce8d1913aaad265ff4cb4af6a1d1b1801d3021
+- name: github.com/k0kubun/pp
+  version: 36d5366f4ec038f9a76dd85c7b29074089bb9b9e
 - name: github.com/labstack/echo
   version: 8d504c1b699c757b267255c53b3e5219f9974abc
 - name: github.com/labstack/gommon
